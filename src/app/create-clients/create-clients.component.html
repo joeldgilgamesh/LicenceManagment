@@ -1,0 +1,32 @@
+<div class=" form1 container col-lg-6">
+
+  <form [formGroup]="editClient" class="bg-light p-2 rounded-right">
+
+    <div class="form-group">
+      <label>Id User </label>
+      <input type="text" class="form-control" formControlName="id_user" readonly="true"
+             placeholder="Id User...">
+    </div>
+
+    <div class="form-group">
+      <label>User Name</label>
+      <input type="text" class="form-control" id="firstName" formControlName="user_name" maxlength="20"
+             placeholder="User Name...">
+    </div>
+
+    <div class="form-group">
+      <label for="LastName">email adress</label>
+      <input type="text" class="form-control" id="LastName" formControlName="email" maxlength="10"
+             placeholder="email adress...">
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="number" class="form-control" aria-describedby="version help" formControlName="phone" required
+             minlength="6" maxlength="20" placeholder="phone number...">
+    </div>
+    <button class="btn btn-success" [disabled]="editClient.invalid" (click)="actionClick()">
+    </button>
+  </form>
+</div>
+

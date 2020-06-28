@@ -28,9 +28,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/styles/bootstrap/css/bootstrap.min.css",
+              "src/assets/styles/Ionicons/css/ionicons.min.css",
+              "src/assets/styles/css/custom.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/styles/jquery/jquery.min.js",
+              "src/assets/styles/bootstrap/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
