@@ -1,6 +1,6 @@
 <div class=" form1 container col-lg-6">
 
-  <form [formGroup]="editProduct" class="bg-light p-2 rounded-right">
+  <form [formGroup]="editProduct" class="bg-light p-2 rounded-right" (ngSubmit)="actionClick()">
 
     <div class="form-group">
       <label>Id </label>
@@ -25,7 +25,7 @@
       <input type="number" class="form-control" aria-describedby="version help" formControlName="version" required
              minlength="6" maxlength="20" placeholder="version...">
     </div>
-    <button class="btn btn-success" [disabled]="editProduct.invalid" (click)="actionClick()">dddd
+    <button class="btn btn-success" type="submit" [disabled]="editProduct.invalid" >dddd
     </button>
   </form>
 </div>

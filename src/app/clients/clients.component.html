@@ -1,4 +1,4 @@
-<main class="py-5">
+
   <section id="team-page">
     <div class="container">
       <div class="head-title d-flex align-items-center justify-content-between my-2">
@@ -8,7 +8,7 @@
             Create USer </button>
         </div>
       </div>
-      <div class="list-title">
+      <div class="list-team-members">
         <ul >
           <li class="d-flex align-items-center mb-2">
 
@@ -55,9 +55,11 @@
                  aria-expanded="false"><i class="icon ion-android-settings"
                                           style="font-size: 30px;color: #888888;"></i></a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" (click)="editUpdateClients(user.id)">Update Product</a>
+                <a class="dropdown-item" (click)="editUpdateClients(user.id)">Update Clients</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" (click)="deleteClients()">Delete product</a>
+                <a class="dropdown-item" (click)="onViewClient(user.id)">Details Clients</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" (click)="deleteClients()">Delete Clients</a>
               </div>
             </div>
 
@@ -65,4 +67,4 @@
       </div>
     </div>
   </section>
-</main>
+

@@ -52,7 +52,7 @@ export class CreateServiceProductComponent implements OnInit {
   }
 
   updateData(product: ProductService): void {
-    product.id = this.editProduct.get('id')!.value;
+    product.id_product = this.editProduct.get('id')!.value;
     product.product_name = this.editProduct.get('product_name')!.value;
     product.code_product = this.editProduct.get('code_product')!.value;
     product.version = this.editProduct.get('version')!.value;
@@ -64,6 +64,8 @@ export class CreateServiceProductComponent implements OnInit {
       this.serviceProduitService.updateService_produit(this.selectedServicesProduits).subscribe(
         data => {
           console.log('sucessfull updtate !');
+          this.route.navigate(['/services-produit']);
+
         },
         error => {
           console.log('fail to update');
@@ -77,10 +79,11 @@ export class CreateServiceProductComponent implements OnInit {
         version: this.editProduct.get('version')!.value,
       }).subscribe(
         data => {
-          console.log('sucessfull update !');
+          console.log('sucessfull add !');
+          this.route.navigate(['/services-produit']);
         },
         error => {
-          console.log('fail to update');
+          console.log('fail to save');
         }
       )
     }

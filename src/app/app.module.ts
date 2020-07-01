@@ -21,6 +21,14 @@ import { ContactComponent } from './contact/contact.component';
 import {ContactsService} from "./service/contacts.service";
 import { CreateContactComponent } from './create-contact/create-contact.component';
 import { ProductServiceComponent } from './product-service/product-service.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SingleClientsComponent } from './single-clients/single-clients.component';
+import { DemandecleComponent } from './demandecle/demandecle.component';
+import {DemandcleService} from "./service/demandcle.service";
+import { GestioncleComponent } from './gestioncle/gestioncle.component';
+import {GestiondecleService} from "./service/gestiondecle.service";
+import { CreateGestioncleComponent } from './create-gestioncle/create-gestioncle.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +43,11 @@ import { ProductServiceComponent } from './product-service/product-service.compo
     ContactComponent,
     CreateContactComponent,
     ProductServiceComponent,
+    PageNotFoundComponent,
+    SingleClientsComponent,
+    DemandecleComponent,
+    GestioncleComponent,
+    CreateGestioncleComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +61,9 @@ import { ProductServiceComponent } from './product-service/product-service.compo
     UserService,
     AuthService,
     AuthGuardService,
-    ContactsService
+    ContactsService,
+    DemandcleService,
+    GestiondecleService
   ],
   bootstrap: [AppComponent]
 })

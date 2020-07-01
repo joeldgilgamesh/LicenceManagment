@@ -64,6 +64,8 @@ export class CreateClientsComponent implements OnInit {
       this.userService.updateUser(this.selectedClient).subscribe(
         data => {
           console.log('sucessfull updtate !');
+          this.route.navigate(['/clients']);
+
         },
         error => {
           console.log('fail to update');
@@ -77,6 +79,8 @@ export class CreateClientsComponent implements OnInit {
         phone: this.editClient.get('phone')!.value,
       }).subscribe(
         data => {
+          this.route.navigate(['/clients']);
+
           console.log('sucessfull update !');
         },
         error => {

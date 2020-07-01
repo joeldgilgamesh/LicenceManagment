@@ -6,7 +6,7 @@ import {Observable} from "rxjs";
 import {User} from "../model/user";
 import {API_URLS} from "../Config/api.url.config.user";
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class UserService {
   private user: User []  ;
 

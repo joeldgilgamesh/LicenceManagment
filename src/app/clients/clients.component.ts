@@ -73,4 +73,8 @@ export class ClientsComponent implements OnInit {
 
   }
 
+  onViewClient(id: number){
+    this.route.navigate(['view-client', id]);
+  }
+
 }
